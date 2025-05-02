@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>استاد لاگ اِن</title>
+  <style>
+    body { font-family: 'Noto Naskh Arabic', serif; text-align: right; padding: 20px; background-color: #f9f9f9; }
+    .form-container { background: white; padding: 20px; max-width: 400px; margin: auto; border: 1px solid #ccc; border-radius: 10px; }
+    input, button { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #17a2b8; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>استاد لاگ اِن</h2>
+    <form onsubmit="return loginTeacher()">
+      <label>یوزر نیم:</label>
+      <input type="text" id="teacherUser" required>
+      <label>پاسورڈ:</label>
+      <input type="password" id="teacherPass" required>
+      <button type="submit">لاگ اِن</button>
+    </form>
+  </div>
+  <script>
+    function loginTeacher() {
+      const user = document.getElementById("teacherUser").value;
+      const pass = document.getElementById("teacherPass").value;
+      if (user === "ustad" && pass === "12345") {
+        alert("لاگ اِن کامیاب");
+      } else {
+        alert("غلط یوزر نیم یا پاسورڈ");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
